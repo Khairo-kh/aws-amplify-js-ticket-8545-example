@@ -274,7 +274,8 @@ __F:__ Setting up Vue app.
 1. Creating user account via amplify authenticator component (sign up).
 2. Added testuser to group "Authors" via Cognito console.
 3. Fixed error "regeneratorRuntime is not defined" throug import in `main.js`.
-3. Testing the app.
+3. Testing the app:
+  a.: dev server by calling `yarn serve` in project directory.
 
 ### 4. Testing app as is
 
