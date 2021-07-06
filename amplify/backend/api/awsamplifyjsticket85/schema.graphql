@@ -1,0 +1,19 @@
+type BlogPost
+  @model
+  @auth(
+    rules: [
+      {
+        allow: groups,
+        groups: ["Authors"]
+      },
+      {
+        allow: public,
+        operations: [read]
+      }
+    ]
+  )
+{
+  id: ID!
+  title: String!
+  content: String!
+}

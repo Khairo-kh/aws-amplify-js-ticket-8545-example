@@ -1,0 +1,55 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Parameters": {
+        "authawsamplifyjsticket853cf927003cf92700UserPoolId": {
+            "Type": "String",
+            "Default": "authawsamplifyjsticket853cf927003cf92700UserPoolId"
+        },
+        
+        "authawsamplifyjsticket853cf927003cf92700AppClientID": {
+            "Type": "String",
+            "Default": "authawsamplifyjsticket853cf927003cf92700AppClientID"
+        },
+        "authawsamplifyjsticket853cf927003cf92700AppClientIDWeb": {
+            "Type": "String",
+            "Default": "authawsamplifyjsticket853cf927003cf92700AppClientIDWeb"
+        },
+        "AuthRoleArn": {
+            "Type": "String"
+        },
+        "UnauthRoleArn": {
+            "Type": "String"
+        },
+        "env": {
+            "Type": "String"
+        }
+    },
+    "Conditions": {
+        "ShouldNotCreateEnvResources": {
+            "Fn::Equals": [
+                {
+                    "Ref": "env"
+                },
+                "NONE"
+            ]
+        }
+    },
+    "Resources": {
+    
+        "AuthorsGroup": {
+          "Type" : "AWS::Cognito::UserPoolGroup",
+          "Properties" : {
+              "GroupName" : "Authors",
+              "Precedence" : 1,
+              
+              "UserPoolId" : {
+                "Ref": "authawsamplifyjsticket853cf927003cf92700UserPoolId"
+              }
+            }
+        },
+        
+    
+    
+    },
+    
+}
