@@ -2,6 +2,24 @@
 
 Ticket: [https://github.com/hedgehogs-mind/aws-amplify-js-ticket-8545-example.git](https://github.com/hedgehogs-mind/aws-amplify-js-ticket-8545-example.git)
 
+___
+
+Table of content:
+
+<!-- MDTOC maxdepth:6 firsth1:0 numbering:0 flatten:0 bullets:1 updateOnSave:1 -->
+
+- [How did I setup this example project?](#how-did-i-setup-this-example-project)   
+   - [1. Create Vue Project](#1-create-vue-project)   
+   - [2. Removed unnecessary stuff out of scaffolded vue app](#2-removed-unnecessary-stuff-out-of-scaffolded-vue-app)   
+   - [3. Created amplify project](#3-created-amplify-project)   
+   - [4. What came next?](#4-what-came-next)   
+- [Results](#results)   
+   - [Without headers config](#without-headers-config)   
+   - [With headers config](#with-headers-config)   
+
+<!-- /MDTOC -->
+
+
 ## How did I setup this example project?
 
 ### 1. Create Vue Project
@@ -28,7 +46,7 @@ __A__: `amplify init`
 
 <details>
   <summary>Console output</summary>
-  
+
   ```
   % amplify init
   Note: It is recommended to run this command from the root of your app directory
@@ -75,12 +93,12 @@ __A__: `amplify init`
   CREATE_IN_PROGRESS DeploymentBucket                        AWS::S3::Bucket            Tue Jul 06 2021 21:24:13 GMT+0200 (GMT+02:00) Resource creation Initiated
   ⠸ Initializing project in the cloud...
 
-  CREATE_COMPLETE AuthRole   AWS::IAM::Role Tue Jul 06 2021 21:24:31 GMT+0200 (GMT+02:00) 
-  CREATE_COMPLETE UnauthRole AWS::IAM::Role Tue Jul 06 2021 21:24:31 GMT+0200 (GMT+02:00) 
+  CREATE_COMPLETE AuthRole   AWS::IAM::Role Tue Jul 06 2021 21:24:31 GMT+0200 (GMT+02:00)
+  CREATE_COMPLETE UnauthRole AWS::IAM::Role Tue Jul 06 2021 21:24:31 GMT+0200 (GMT+02:00)
   ⠸ Initializing project in the cloud...
 
-  CREATE_COMPLETE DeploymentBucket                        AWS::S3::Bucket            Tue Jul 06 2021 21:24:35 GMT+0200 (GMT+02:00) 
-  CREATE_COMPLETE amplify-awsamplifyjsticket85-dev-****** AWS::CloudFormation::Stack Tue Jul 06 2021 21:24:37 GMT+0200 (GMT+02:00) 
+  CREATE_COMPLETE DeploymentBucket                        AWS::S3::Bucket            Tue Jul 06 2021 21:24:35 GMT+0200 (GMT+02:00)
+  CREATE_COMPLETE amplify-awsamplifyjsticket85-dev-****** AWS::CloudFormation::Stack Tue Jul 06 2021 21:24:37 GMT+0200 (GMT+02:00)
   ✔ Successfully created initial AWS cloud resources for deployments.
   ✔ Initialized provider successfully.
   Initialized your environment successfully.
@@ -108,14 +126,14 @@ __B:__ Added auth via `amplify auth add`
   ```
   % amplify auth add
   Using service: Cognito, provided by: awscloudformation
- 
-  The current configured provider is Amazon Cognito. 
- 
+
+  The current configured provider is Amazon Cognito.
+
   Do you want to use the default authentication and security configuration? Manual configuration
   Select the authentication/authorization services that you want to use: User Sign-Up & Sign-In only (Best used with a cloud API only)
   Please provide a friendly name for your resource that will be used to label this category in the project: awsamplifyjsticket__**obfuscated**__
   Please provide a name for your user pool: awsamplifyjsticket853__**obfuscated**__
-  Warning: you will not be able to edit these selections. 
+  Warning: you will not be able to edit these selections.
   How do you want users to be able to sign in? Username
   Do you want to add User Pool Groups? Yes
   ? Provide a name for your user pool group: Authors
@@ -128,12 +146,12 @@ __B:__ Added auth via `amplify auth add`
   Please specify an email verification message: Your super duper code is: {####}
   Do you want to override the default password policy for this User Pool? Yes
   Enter the minimum password length for this User Pool: 6
-  Select the password character requirements for your userpool: 
-  Warning: you will not be able to edit these selections. 
+  Select the password character requirements for your userpool:
+  Warning: you will not be able to edit these selections.
   What attributes are required for signing up? Email
   Specify the app's refresh token expiration period (in days): 30
   Do you want to specify the user attributes this app can read and write? No
-  Do you want to enable any of the following capabilities? 
+  Do you want to enable any of the following capabilities?
   Do you want to use an OAuth flow? No
   ? Do you want to configure Lambda Triggers for Cognito? No
   Successfully added auth resource awsamplifyjsticket853__**obfuscated**__ locally
@@ -227,13 +245,13 @@ __E:__ `amplify push` including __graphql codegen__
   | Auth     | userPoolGroups                       | Create    | awscloudformation |
   | Auth     | awsamplifyjsticket853cf927003cf92700 | Create    | awscloudformation |
   | Api      | awsamplifyjsticket85                 | Create    | awscloudformation |
-  ? Are you sure you want to continue? (Y/n) 
-  peter@MacBook-Air-von-Peter aws-amplify-js-ticket-8545-example % 
-  peter@MacBook-Air-von-Peter aws-amplify-js-ticket-8545-example % 
-  peter@MacBook-Air-von-Peter aws-amplify-js-ticket-8545-example % 
-  peter@MacBook-Air-von-Peter aws-amplify-js-ticket-8545-example % 
-  peter@MacBook-Air-von-Peter aws-amplify-js-ticket-8545-example % 
-  peter@MacBook-Air-von-Peter aws-amplify-js-ticket-8545-example % 
+  ? Are you sure you want to continue? (Y/n)
+  peter@MacBook-Air-von-Peter aws-amplify-js-ticket-8545-example %
+  peter@MacBook-Air-von-Peter aws-amplify-js-ticket-8545-example %
+  peter@MacBook-Air-von-Peter aws-amplify-js-ticket-8545-example %
+  peter@MacBook-Air-von-Peter aws-amplify-js-ticket-8545-example %
+  peter@MacBook-Air-von-Peter aws-amplify-js-ticket-8545-example %
+  peter@MacBook-Air-von-Peter aws-amplify-js-ticket-8545-example %
   peter@MacBook-Air-von-Peter aws-amplify-js-ticket-8545-example % amplify push
   ✔ Successfully pulled backend environment dev from the cloud.
 
@@ -269,7 +287,7 @@ __F:__ Setting up Vue app.
 - Everything in file `src/App.vue` including buttons to load data and create data.
 
 
-### 3. What came next?
+### 4. What came next?
 
 1. Creating user account via amplify authenticator component (sign up).
 2. Added testuser to group "Authors" via Cognito console.
@@ -277,11 +295,20 @@ __F:__ Setting up Vue app.
 3. Testing the app:
   a.: dev server by calling `yarn serve` in project directory.
 
-### 4. Testing app as is
+## Results
+
+### Without headers config
 
 Result:
 
-### 5. Testing app with graphql_headers supplied
+![GIF showing demo app usage](gifs/demo1.gif)
+
+### With headers config
 
 Remove comments in `main.js` to enable `API`-config withing `Amplify.configure`.
+
 The additional config adds the jwt, if present, to a graphql request.
+
+Result with activated headers config:
+
+![GIF showing demo app usage](gifs/demo2_headers.gif)
