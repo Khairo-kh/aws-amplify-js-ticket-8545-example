@@ -295,11 +295,13 @@ __F:__ Setting up Vue app.
 3. Testing the app:
   a.: dev server by calling `yarn serve` in project directory.
 
-## Results
+## Results (GIFs)
 
 ### Without headers config
 
-Result:
+Result (GIF):
+
+*if not playing automatically > right click > open in new tab*
 
 ![GIF showing demo app usage](gifs/demo1.gif)
 
@@ -309,6 +311,8 @@ Remove comments in `main.js` to enable `API`-config withing `Amplify.configure`.
 
 The additional config adds the jwt, if present, to a graphql request.
 
-Result with activated headers config:
+Result with activated headers config (GIF):
+
+*if not playing automatically > right click > open in new tab*
 
 ![GIF showing demo app usage](gifs/demo2_headers.gif)
